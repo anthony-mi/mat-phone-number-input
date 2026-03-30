@@ -83,6 +83,7 @@ If you want to show the sample number for the country selected or errors , use m
 
 | Options            | Type       | Default      | Description                                                                         |
 | ------------------ | ---------- | ------------ | ----------------------------------------------------------------------------------- |
+| initialCountry     | `string`   | `undefined`  | Sets the initially selected country by its ISO 3166-1 code (e.g. 'us', 'pl').       |
 | enablePlaceholder  | `boolean`  | `false`      | Input placeholder text, which adapts to the country selected.                       |
 | enableSearch       | `boolean`  | `false`      | Whether to display a search bar to help filter down the list of countries           |
 | format             | `string`   | `default`    | Format of "as you type" input. Possible values: national, international, default    |

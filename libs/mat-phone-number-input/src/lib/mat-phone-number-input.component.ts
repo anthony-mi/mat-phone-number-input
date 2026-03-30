@@ -396,7 +396,18 @@ export class MatPhoneNumberInput
 
   private _getPhoneNumberPlaceHolder(countryISOCode: any): string | undefined {
     try {
-      return getExampleNumber(countryISOCode, Examples)?.number;
+      const example = getExampleNumber(countryISOCode, Examples);
+
+      switch (this.format) {
+        case 'national':
+          return example?.formatNational();
+        case 'international':
+          return example?.formatInternational();
+        case 'E164':
+          return example?.nationalNumber;
+        default:
+          return example?.formatNational();
+      }
     } catch (e) {
       return e as any;
     }
