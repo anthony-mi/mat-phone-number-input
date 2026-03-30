@@ -1,8 +1,7 @@
 {
   "name": "@mat-phone-number-input/source",
-  "version": "0.0.0",
+  "version": "19.0.0",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "copy-files": "cp README.md libs/mat-phone-number-input && cp LICENSE libs/mat-phone-number-input",
     "build-many": "nx run-many -t build",
