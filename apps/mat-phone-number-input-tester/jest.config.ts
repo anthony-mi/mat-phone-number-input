@@ -1,8 +1,8 @@
 export default {
-  displayName: 'mat-tel-input-tester',
+  displayName: 'mat-phone-number-input-tester',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/mat-tel-input-tester',
+  coverageDirectory: '../../coverage/apps/mat-phone-number-input-tester',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',

@@ -12,7 +12,7 @@
   <form [formGroup]="form1">
     <mat-form-field class="w-full" [floatLabel]="'always'">
       <mat-label>Phone</mat-label>
-      <mat-tel-input
+      <mat-phone-number-input
         format="default"
         initialCountry="no"
         [preferredCountries]="['se', 'fi', 'no']"
@@ -22,7 +22,7 @@
         describedBy="phoneInput"
         required
         maxLength="20"
-      ></mat-tel-input>
+      ></mat-phone-number-input>
       <mat-error>Invalid phone</mat-error>
     </mat-form-field>
   </form>
@@ -55,10 +55,10 @@
   <h2>ngModel</h2>
   <mat-form-field [floatLabel]="'always'">
     <mat-label>Phone number</mat-label>
-    <mat-tel-input
+    <mat-phone-number-input
       [(ngModel)]="phone"
       [disabled]="phoneDisabled"
-    ></mat-tel-input>
+    ></mat-phone-number-input>
   </mat-form-field>
 
   <div class="flex gap-4">

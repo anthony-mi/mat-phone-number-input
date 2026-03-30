@@ -24,18 +24,18 @@
 
 :host {
   @media print {
-    --mat-tel-input-flag-display: none;
+    --mat-phone-number-input-flag-display: none;
   }
 }
 
 .country-selector,
-input.mat-tel-input-input::placeholder {
+input.mat-phone-number-input-input::placeholder {
   opacity: 1;
 }
 
-.mat-tel-input-container {
+.mat-phone-number-input-container {
   display: flex;
-  height: var(--mat-tel-input-height, 24px);
+  height: var(--mat-phone-number-input-height, 24px);
 }
 
 input {
@@ -50,11 +50,11 @@ input {
   position: relative;
   z-index: 0;
 
-  &.mat-tel-input-input {
+  &.mat-phone-number-input-input {
     &::placeholder {
       opacity: var(
-        --mat-tel-input-placeholder-opacity,
-        var(--mat-tel-input-opacity, 1)
+        --mat-phone-number-input-placeholder-opacity,
+        var(--mat-phone-number-input-opacity, 1)
       );
     }
   }
@@ -90,8 +90,8 @@ input {
   line-height: unset;
   padding: 1px;
   opacity: var(
-    --mat-tel-input-selector-opacity,
-    var(--mat-tel-input-opacity, 1)
+    --mat-phone-number-input-selector-opacity,
+    var(--mat-phone-number-input-opacity, 1)
   );
   transition: opacity 200ms;
   border: unset;
@@ -118,7 +118,7 @@ input {
 }
 
 .country-selector-flag {
-  display: var(--mat-tel-input-flag-display, inline-block);
+  display: var(--mat-phone-number-input-flag-display, inline-block);
   margin-right: 0.5ex;
 }
 

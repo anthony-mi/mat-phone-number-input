@@ -12,14 +12,14 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { RouterModule } from '@angular/router';
 
-import { MatTelInput } from 'mat-tel-input';
+import { MatPhoneNumberInput } from 'mat-phone-number-input';
 
 @Component({
   imports: [
     MatFormFieldModule,
     MatInputModule,
     RouterModule,
-    MatTelInput,
+    MatPhoneNumberInput,
     ReactiveFormsModule,
     JsonPipe,
     MatSlideToggleModule,
@@ -33,7 +33,7 @@ import { MatTelInput } from 'mat-tel-input';
 export class AppComponent {
   private fb = inject(FormBuilder);
 
-  title = 'mat-tel-input-tester';
+  title = 'mat-phone-number-input-tester';
   form1 = this.fb.group({
     phone: ['+919813785563', [Validators.required]],
   });

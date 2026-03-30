@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatTelInputComponent } from './mat-tel-input.component';
+import { MatPhoneNumberInput } from './mat-phone-number-input.component';
 
-describe('MatTelInputComponent', () => {
-  let component: MatTelInputComponent;
-  let fixture: ComponentFixture<MatTelInputComponent>;
+describe('MatPhoneNumberInput', () => {
+  let component: MatPhoneNumberInput;
+  let fixture: ComponentFixture<MatPhoneNumberInput>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatTelInputComponent],
+      imports: [MatPhoneNumberInput],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(MatTelInputComponent);
+    fixture = TestBed.createComponent(MatPhoneNumberInput);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -3,29 +3,29 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mat-tel-input-tester": {
+    "mat-phone-number-input-tester": {
       "projectType": "application",
-      "root": "apps/mat-tel-input-tester",
-      "sourceRoot": "apps/mat-tel-input-tester/src",
+      "root": "apps/mat-phone-number-input-tester",
+      "sourceRoot": "apps/mat-phone-number-input-tester/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/apps/mat-tel-input-tester",
-            "index": "apps/mat-tel-input-tester/src/index.html",
-            "browser": "apps/mat-tel-input-tester/src/main.ts",
+            "outputPath": "dist/apps/mat-phone-number-input-tester",
+            "index": "apps/mat-phone-number-input-tester/src/index.html",
+            "browser": "apps/mat-phone-number-input-tester/src/main.ts",
             "polyfills": ["zone.js"],
-            "tsConfig": "apps/mat-tel-input-tester/tsconfig.app.json",
+            "tsConfig": "apps/mat-phone-number-input-tester/tsconfig.app.json",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "apps/mat-tel-input-tester/public"
+                "input": "apps/mat-phone-number-input-tester/public"
               }
             ],
             "styles": [
               "@angular/material/prebuilt-themes/azure-blue.css",
-              "apps/mat-tel-input-tester/src/styles.css"
+              "apps/mat-phone-number-input-tester/src/styles.css"
             ],
             "scripts": []
           },
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "mat-tel-input-tester:build:production"
+              "buildTarget": "mat-phone-number-input-tester:build:production"
             },
             "development": {
-              "buildTarget": "mat-tel-input-tester:build:development"
+              "buildTarget": "mat-phone-number-input-tester:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "mat-tel-input-tester:build"
+            "buildTarget": "mat-phone-number-input-tester:build"
           }
         },
         "lint": {
@@ -77,28 +77,28 @@
         "test": {
           "builder": "@nx/jest:jest",
           "options": {
-            "jestConfig": "apps/mat-tel-input-tester/jest.config.ts"
+            "jestConfig": "apps/mat-phone-number-input-tester/jest.config.ts"
           }
         }
       }
     },
-    "mat-tel-input": {
+    "mat-phone-number-input": {
       "projectType": "library",
-      "root": "libs/mat-tel-input",
-      "sourceRoot": "libs/mat-tel-input/src",
+      "root": "libs/mat-phone-number-input",
+      "sourceRoot": "libs/mat-phone-number-input/src",
       "prefix": "",
       "architect": {
         "build": {
           "builder": "@nx/angular:package",
           "options": {
-            "project": "libs/mat-tel-input/ng-package.json"
+            "project": "libs/mat-phone-number-input/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "libs/mat-tel-input/tsconfig.lib.prod.json"
+              "tsConfig": "libs/mat-phone-number-input/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "libs/mat-tel-input/tsconfig.lib.json"
+              "tsConfig": "libs/mat-phone-number-input/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -106,7 +106,7 @@
         "test": {
           "builder": "@nx/jest:jest",
           "options": {
-            "jestConfig": "libs/mat-tel-input/jest.config.ts"
+            "jestConfig": "libs/mat-phone-number-input/jest.config.ts"
           }
         },
         "lint": {

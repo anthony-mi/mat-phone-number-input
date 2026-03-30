@@ -45,11 +45,11 @@ import { Subject } from 'rxjs';
 
 import { CountryCode, Examples } from './country-code';
 import { Country } from './country.model';
-import { PhoneNumberFormat } from './mat-tel-format.model';
-import { matTelInputValidator } from './mat-tel-input.validator';
+import { PhoneNumberFormat } from './mat-phone-number-format.model';
+import { matPhoneNumberInputValidator } from './mat-phone-number-input.validator';
 import { SearchCountryPipe } from './search-country.pipe';
 
-class matTelInputBase {
+class matPhoneNumberInputBase {
   constructor(
     public _defaultErrorStateMatcher: ErrorStateMatcher,
     public _parentForm: NgForm,
@@ -59,15 +59,15 @@ class matTelInputBase {
 }
 
 @Component({
-  selector: 'mat-tel-input',
-  templateUrl: './mat-tel-input.component.html',
-  styleUrls: ['./mat-tel-input.component.scss'],
+  selector: 'mat-phone-number-input',
+  templateUrl: './mat-phone-number-input.component.html',
+  styleUrls: ['./mat-phone-number-input.component.scss'],
   providers: [
     CountryCode,
-    { provide: MatFormFieldControl, useExisting: MatTelInput },
+    { provide: MatFormFieldControl, useExisting: MatPhoneNumberInput },
     {
       provide: NG_VALIDATORS,
-      useValue: matTelInputValidator,
+      useValue: matPhoneNumberInputValidator,
       multi: true,
     },
   ],
@@ -86,8 +86,8 @@ class matTelInputBase {
     SearchCountryPipe,
   ],
 })
-export class MatTelInput
-  extends matTelInputBase
+export class MatPhoneNumberInput
+  extends matPhoneNumberInputBase
   implements OnInit, DoCheck, OnDestroy
 {
   static nextId = 0;
@@ -97,7 +97,7 @@ export class MatTelInput
   @ViewChild('focusable', { static: false }) focusable!: ElementRef;
 
   @HostBinding()
-  id = `mat-tel-input-${MatTelInput.nextId++}`;
+  id = `mat-phone-number-input-${MatPhoneNumberInput.nextId++}`;
   @HostBinding('class.floating')
   get shouldLabelFloat(): boolean {
     return this.focused || !this.empty;

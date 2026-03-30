@@ -1,11 +1,11 @@
-# International Telephone Input for Angular Material (mat-tel-input)
+# International Telephone Input for Angular Material (mat-phone-number-input)
 
 An Angular Material package for entering and validating international telephone numbers. It adds a flag dropdown to any input, detects the user's country, displays a relevant placeholder and provides formatting/validation methods.
 
-[![npm version](https://img.shields.io/npm/v/mat-tel-input.svg)](https://www.npmjs.com/package/mat-tel-input)
-![NPM](https://img.shields.io/npm/l/mat-tel-input)
-![npm bundle size](https://img.shields.io/bundlephobia/min/mat-tel-input)
-![npm](https://img.shields.io/npm/dm/mat-tel-input)
+[![npm version](https://img.shields.io/npm/v/mat-phone-number-input.svg)](https://www.npmjs.com/package/mat-phone-number-input)
+![NPM](https://img.shields.io/npm/l/mat-phone-number-input)
+![npm bundle size](https://img.shields.io/bundlephobia/min/mat-phone-number-input)
+![npm](https://img.shields.io/npm/dm/mat-phone-number-input)
 
 ## Caution
 
@@ -23,7 +23,7 @@ This is a fork from [ngx-mat-input-tel](https://github.com/rbalet/ngx-mat-input-
 
 ### Install This Library
 
-`$ npm i mat-tel-input@latest`
+`$ npm i mat-phone-number-input@latest`
 
 ### Install Dependencies _Optional_
 
@@ -46,7 +46,7 @@ Refer to main app in this repository for working example.
 ```html
 <mat-form-field [floatLabel]="'always'">
   <mat-label>Phone</mat-label>
-  <mat-tel-input [preferredCountries]="['us', 'tz']" [enablePlaceholder]="true" [enableSearch]="true" name="phone" describedBy="phoneInput" formControlName="phone" />
+  <mat-phone-number-input [preferredCountries]="['us', 'tz']" [enablePlaceholder]="true" [enableSearch]="true" name="phone" describedBy="phoneInput" formControlName="phone" />
 </mat-form-field>
 ```
 
@@ -54,7 +54,7 @@ Refer to main app in this repository for working example.
 
 <mat-form-field [floatLabel]="'always'">
   <mat-label>Phone</mat-label>
-  <mat-tel-input
+  <mat-phone-number-input
     [preferredCountries]="['us', 'gb']"
     [enablePlaceholder]="true"
     [enableSearch]="true"
@@ -72,7 +72,7 @@ If you want to show the sample number for the country selected or errors , use m
 ```html
 <mat-form-field [floatLabel]="'always'">
   <mat-label>Phone</mat-label>
-  <mat-tel-input [preferredCountries]="['us', 'tz']" [enablePlaceholder]="true" [enableSearch]="true" name="phone" describedBy="phoneInput" formControlName="phone" />
+  <mat-phone-number-input [preferredCountries]="['us', 'tz']" [enablePlaceholder]="true" [enableSearch]="true" name="phone" describedBy="phoneInput" formControlName="phone" />
   <mat-hint>e.g. {{phone.selectedCountry.placeHolder}}</mat-hint>
   <mat-error *ngIf="f.form.controls['phone']?.errors?.required">Required Field</mat-error>
   <mat-error *ngIf="f.form.controls['phone']?.errors?.validatePhoneNumber">Invalid Number</mat-error>
@@ -103,10 +103,10 @@ If you want to show the sample number for the country selected or errors , use m
 
 | Name                                  | Default        | Explanation                                                                   |
 | ------------------------------------- | -------------- | ----------------------------------------------------------------------------- |
-| `--mat-tel-input-opacity`             | `1`            | If you wish both, the country flag and the placeholder to be shown by default |
-| `--mat-tel-input-selector-opacity`    | `1`            | If you wish the country flag to be shown by default                           |
-| `--mat-tel-input-placeholder-opacity` | `1`            | If you wish the placeholder flag to be shown by default                       |
-| `--mat-tel-input-flag-display`        | `inline-block` | If you wish to hide the country flag                                          |
+| `--mat-phone-number-input-opacity`             | `1`            | If you wish both, the country flag and the placeholder to be shown by default |
+| `--mat-phone-number-input-selector-opacity`    | `1`            | If you wish the country flag to be shown by default                           |
+| `--mat-phone-number-input-placeholder-opacity` | `1`            | If you wish the placeholder flag to be shown by default                       |
+| `--mat-phone-number-input-flag-display`        | `inline-block` | If you wish to hide the country flag                                          |
 
 ## Validator
 
@@ -119,7 +119,7 @@ In case you had to manually remove the validator, the library exported it so you
 ## Library Contributions
 
 - Fork repo.
-- Go to `./libs/mat-tel-input`
+- Go to `./libs/mat-phone-number-input`
 - Update `./src/lib` with new functionality.
 - Update README.md
 - Pull request.

@@ -1,23 +1,23 @@
 {
-  "name": "mat-tel-input",
+  "name": "mat-phone-number-input",
   "version": "19.0.5-0",
   "sideEffects": false,
   "author": {
-    "name": "Munir I Said",
-    "email": "saidmunir73@gmail.com"
+    "name": "Anton Mynchenko",
+    "email": "code.inside.us@gmail.com"
   },
   "maintainers": [
-    "Munir I Said <saidmunir73@gmail.com>"
+    "Anton Mynchenko <code.inside.us@gmail.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Muneersahel/mat-tel-input.git"
+    "url": "git+https://github.com/anthony-mi/mat-phone-number-input.git"
   },
   "keywords": [
     "angular",
     "material",
     "phone number",
-    "mat-tel-input",
+    "mat-phone-number-input",
     "phone",
     "validation",
     "international",

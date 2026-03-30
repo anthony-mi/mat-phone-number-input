@@ -1,4 +1,4 @@
-<div class="mat-tel-input-container">
+<div class="mat-phone-number-input-container">
   <button
     type="button"
     matRipple
@@ -20,8 +20,8 @@
 
   <mat-menu
     #menu="matMenu"
-    class="mat-tel-input-overlay-panel"
-    [backdropClass]="'mat-tel-input-overlay-backdrop'"
+    class="mat-phone-number-input-overlay-panel"
+    [backdropClass]="'mat-phone-number-input-overlay-backdrop'"
   >
     @if (enableSearch) {
       <input
@@ -91,7 +91,7 @@
   </mat-menu>
 
   <input
-    class="mat-tel-input-input"
+    class="mat-phone-number-input-input"
     matInput
     type="tel"
     inputmode="tel"

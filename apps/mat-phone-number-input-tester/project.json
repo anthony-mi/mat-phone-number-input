@@ -1,29 +1,29 @@
 {
-  "name": "mat-tel-input-tester",
+  "name": "mat-phone-number-input-tester",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/mat-tel-input-tester/src",
+  "sourceRoot": "apps/mat-phone-number-input-tester/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/mat-tel-input-tester",
-        "index": "apps/mat-tel-input-tester/src/index.html",
-        "browser": "apps/mat-tel-input-tester/src/main.ts",
+        "outputPath": "dist/apps/mat-phone-number-input-tester",
+        "index": "apps/mat-phone-number-input-tester/src/index.html",
+        "browser": "apps/mat-phone-number-input-tester/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/mat-tel-input-tester/tsconfig.app.json",
+        "tsConfig": "apps/mat-phone-number-input-tester/tsconfig.app.json",
         "assets": [
           {
             "glob": "**/*",
-            "input": "apps/mat-tel-input-tester/public"
+            "input": "apps/mat-phone-number-input-tester/public"
           }
         ],
         "styles": [
           "@angular/material/prebuilt-themes/azure-blue.css",
-          "apps/mat-tel-input-tester/src/styles.css"
+          "apps/mat-phone-number-input-tester/src/styles.css"
         ],
         "scripts": []
       },
@@ -55,10 +55,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "mat-tel-input-tester:build:production"
+          "buildTarget": "mat-phone-number-input-tester:build:production"
         },
         "development": {
-          "buildTarget": "mat-tel-input-tester:build:development"
+          "buildTarget": "mat-phone-number-input-tester:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -66,7 +66,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "mat-tel-input-tester:build"
+        "buildTarget": "mat-phone-number-input-tester:build"
       }
     },
     "lint": {
@@ -76,14 +76,14 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/mat-tel-input-tester/jest.config.ts"
+        "jestConfig": "apps/mat-phone-number-input-tester/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "mat-tel-input-tester:build",
-        "staticFilePath": "dist/apps/mat-tel-input-tester/browser",
+        "buildTarget": "mat-phone-number-input-tester:build",
+        "staticFilePath": "dist/apps/mat-phone-number-input-tester/browser",
         "spa": true
       }
     }

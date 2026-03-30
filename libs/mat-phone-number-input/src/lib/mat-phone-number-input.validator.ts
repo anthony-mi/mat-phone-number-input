@@ -1,7 +1,7 @@
 import { AbstractControl, ValidationErrors } from '@angular/forms';
 import { parsePhoneNumber, PhoneNumber } from 'libphonenumber-js';
 
-export const matTelInputValidator = (
+export const matPhoneNumberInputValidator = (
   control: AbstractControl,
 ): ValidationErrors | null => {
   const error = { validatePhoneNumber: true };

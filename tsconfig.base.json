@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "mat-tel-input": ["libs/mat-tel-input/src/index.ts"]
+      "mat-phone-number-input": ["libs/mat-phone-number-input/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
