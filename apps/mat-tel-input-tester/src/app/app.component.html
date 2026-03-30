@@ -10,10 +10,12 @@
 
   <h2>Form sample</h2>
   <form [formGroup]="form1">
-    <mat-form-field class="w-full" appearance="outline" [floatLabel]="'always'">
+    <mat-form-field class="w-full" [floatLabel]="'always'">
       <mat-label>Phone</mat-label>
       <mat-tel-input
-        [preferredCountries]="['us', 'tz']"
+        format="default"
+        initialCountry="no"
+        [preferredCountries]="['se', 'fi', 'no']"
         enablePlaceholder
         enableSearch
         [formControl]="form1.controls.phone"

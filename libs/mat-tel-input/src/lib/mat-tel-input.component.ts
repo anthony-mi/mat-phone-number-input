@@ -113,6 +113,7 @@ export class MatTelInput
   @Input() onlyCountries: string[] = [];
   @Input() preferredCountries: string[] = [];
   @Input() searchPlaceholder = 'Search country or code';
+  @Input() initialCountry?: string;
   @Input({ transform: booleanAttribute }) enablePlaceholder = false;
   @Input({ transform: booleanAttribute }) enableSearch = false;
   @Input({ transform: booleanAttribute }) resetOnChange = false;
@@ -244,6 +245,8 @@ export class MatTelInput
   }
 
   private _setDefaultCountry() {
+    const initialCountry = this.initialCountry?.trim().toLowerCase();
+
     if (this.numberInstance?.country) {
       // If an existing number is present, we use it to determine selectedCountry
       this.selectedCountry = this.getCountry(this.numberInstance.country);
@@ -251,6 +254,17 @@ export class MatTelInput
       this.selectedCountry = this.preferredCountriesInDropDown[0];
     } else {
       this.selectedCountry = this.allCountries[0];
+    }
+
+    if (initialCountry) {
+      const initial = this.allCountries.find((c) => c.iso2 === initialCountry);
+
+      if (initial) {
+        this.selectedCountry = initial;
+        this.countryChanged.emit(this.selectedCountry);
+
+        return;
+      }
     }
 
     this.countryChanged.emit(this.selectedCountry);
