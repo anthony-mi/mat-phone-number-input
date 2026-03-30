@@ -31,6 +31,8 @@
         type="text"
         [placeholder]="searchPlaceholder"
         (click)="$event.stopPropagation()"
+        (keydown)="$event.stopPropagation()"
+        (keyup)="$event.stopPropagation()"
       />
     }
     @for (country of preferredCountriesInDropDown; track $index) {
