@@ -1,6 +1,6 @@
 {
   "name": "@antonmynch/mat-phone-number-input",
-  "version": "19.0.1",
+  "version": "19.0.2",
   "license": "MIT",
   "scripts": {
     "copy-files": "cp README.md libs/mat-phone-number-input && cp LICENSE libs/mat-phone-number-input",

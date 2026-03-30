@@ -46,7 +46,7 @@ Refer to main app in this repository for working example.
 ```html
 <mat-form-field [floatLabel]="'always'">
   <mat-label>Phone</mat-label>
-  <mat-phone-number-input [preferredCountries]="['us', 'tz']" [enablePlaceholder]="true" [enableSearch]="true" name="phone" describedBy="phoneInput" formControlName="phone" />
+  <mat-phone-number-input [preferredCountries]="['us', 'se', 'ua']" [enablePlaceholder]="true" [enableSearch]="true" name="phone" describedBy="phoneInput" formControlName="phone" />
 </mat-form-field>
 ```
 
@@ -55,7 +55,7 @@ Refer to main app in this repository for working example.
 <mat-form-field [floatLabel]="'always'">
   <mat-label>Phone</mat-label>
   <mat-phone-number-input
-    [preferredCountries]="['us', 'gb']"
+    [preferredCountries]="['us', 'se', 'ua']"
     [enablePlaceholder]="true"
     [enableSearch]="true"
     name="phone"
@@ -72,7 +72,7 @@ If you want to show the sample number for the country selected or errors , use m
 ```html
 <mat-form-field [floatLabel]="'always'">
   <mat-label>Phone</mat-label>
-  <mat-phone-number-input [preferredCountries]="['us', 'tz']" [enablePlaceholder]="true" [enableSearch]="true" name="phone" describedBy="phoneInput" formControlName="phone" />
+  <mat-phone-number-input [preferredCountries]="['us', 'se', 'ua']" [enablePlaceholder]="true" [enableSearch]="true" name="phone" describedBy="phoneInput" formControlName="phone" />
   <mat-hint>e.g. {{phone.selectedCountry.placeHolder}}</mat-hint>
   <mat-error *ngIf="f.form.controls['phone']?.errors?.required">Required Field</mat-error>
   <mat-error *ngIf="f.form.controls['phone']?.errors?.validatePhoneNumber">Invalid Number</mat-error>
