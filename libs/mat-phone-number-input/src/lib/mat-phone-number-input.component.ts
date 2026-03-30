@@ -47,7 +47,8 @@ import { CountryCode, Examples } from './country-code';
 import { Country } from './country.model';
 import { PhoneNumberFormat } from './mat-phone-number-format.model';
 import { matPhoneNumberInputValidator } from './mat-phone-number-input.validator';
-import { SearchCountryPipe } from './search-country.pipe';
+import { SearchCountryPipe } from './pipes/search-country.pipe';
+import { StripNativeNamePipe } from './pipes/strip-native-name.pipe';
 
 class matPhoneNumberInputBase {
   constructor(
@@ -84,6 +85,7 @@ class matPhoneNumberInputBase {
     MatDividerModule,
 
     SearchCountryPipe,
+    StripNativeNamePipe,
   ],
 })
 export class MatPhoneNumberInput
@@ -114,6 +116,7 @@ export class MatPhoneNumberInput
   @Input() preferredCountries: string[] = [];
   @Input() searchPlaceholder = 'Search country or code';
   @Input() initialCountry?: string;
+  @Input({ transform: booleanAttribute }) hideNativeName = false;
   @Input({ transform: booleanAttribute }) enablePlaceholder = false;
   @Input({ transform: booleanAttribute }) enableSearch = false;
   @Input({ transform: booleanAttribute }) resetOnChange = false;

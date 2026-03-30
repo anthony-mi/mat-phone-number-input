@@ -33,10 +33,10 @@ This is a fork from [ngx-mat-input-tel](https://github.com/rbalet/ngx-mat-input-
 
 ### Import
 
-Add `MatTelInput` to your component file:
+Add `MatPhoneNumberInput` to your component file:
 
 ```ts
-imports: [MatTelInput];
+imports: [MatPhoneNumberInput];
 ```
 
 ## Example
@@ -115,7 +115,7 @@ In case you had to manually remove the validator, the library exported it so you
 
 | Name                   | Description                                     | Example                                              |
 | ---------------------- | ----------------------------------------------- | ---------------------------------------------------- |
-| `matTelInputValidator` | The actual phone validator used for the control | `phoneControl.addValidators([matTelInputValidator])` |
+| `matPhoneNumberInputValidator` | The actual phone validator used for the control | `phoneControl.addValidators([matPhoneNumberInputValidator])` |
 
 ## Library Contributions
 

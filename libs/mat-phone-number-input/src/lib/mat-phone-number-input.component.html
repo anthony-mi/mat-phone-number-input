@@ -46,7 +46,7 @@
           <div class="flag" [ngClass]="country.flagClass"></div>
         </div>
         <div class="label-wrapper">
-          {{ country.name }}
+          {{ hideNativeName ? (country.name | stripNativeName) : country.name }}
 
           @if (country?.dialCode) {
             <span [style]="!searchCriteria ? 'white-space: nowrap' : ''">
@@ -74,7 +74,7 @@
           <div class="flag" [ngClass]="country.flagClass"></div>
         </div>
         <div class="label-wrapper">
-          {{ country.name }}
+          {{ hideNativeName ? (country.name | stripNativeName) : country.name }}
 
           @if (country?.dialCode) {
             <span [style]="!searchCriteria ? 'white-space: nowrap' : ''">

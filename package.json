@@ -1,11 +1,11 @@
 {
-  "name": "@mat-phone-number-input/source",
-  "version": "19.0.0",
+  "name": "@antonmynch/mat-phone-number-input",
+  "version": "19.0.1",
   "license": "MIT",
   "scripts": {
     "copy-files": "cp README.md libs/mat-phone-number-input && cp LICENSE libs/mat-phone-number-input",
     "build-many": "nx run-many -t build",
-    "publish": "yarn build-many && npx nx release publish"
+    "publish": "npx nx run-many --target=build --all && npx nx release publish"
   },
   "dependencies": {
     "@angular/animations": "~19.0.0",

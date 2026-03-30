@@ -33,10 +33,10 @@ This is a fork from the [ngx-mat-intl-tel-input](https://github.com/tanansatpal/
 
 ### Import
 
-Add `MatTelInput` to your component file:
+Add `MatPhoneNumberInput` to your component file:
 
 ```ts
-imports: [MatTelInput];
+imports: [MatPhoneNumberInput];
 ```
 
 ## Example
@@ -90,6 +90,7 @@ If you want to show the sample number for the country selected or errors , use m
 | maxLength          | `number`   | `15`         | max length of the input.                                                            |
 | onlyCountries      | `string[]` | `[]`         | List of manually selected country abbreviations, which will appear in the dropdown. |
 | preferredCountries | `string[]` | `[]`         | List of country abbreviations, which will appear at the top.                        |
+| hideNativeName     | `boolean`  | `false`      | Hides the native country name from the dropdown list.                        |
 | resetOnChange      | `boolean`  | `false`      | Reset input on country change                                                       |
 | searchPlaceholder  | `string`   | `Search ...` | Placeholder for the search input                                                    |
 
@@ -114,7 +115,7 @@ In case you had to manually remove the validator, the library exported it so you
 
 | Name                   | Description                                     | Example                                              |
 | ---------------------- | ----------------------------------------------- | ---------------------------------------------------- |
-| `matTelInputValidator` | The actual phone validator used for the control | `phoneControl.addValidators([matTelInputValidator])` |
+| `matPhoneNumberInputValidator` | The actual phone validator used for the control | `phoneControl.addValidators([matPhoneNumberInputValidator])` |
 
 ## Library Contributions
 
