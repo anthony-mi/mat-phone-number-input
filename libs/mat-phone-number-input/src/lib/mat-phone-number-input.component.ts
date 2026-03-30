@@ -166,7 +166,7 @@ export class MatPhoneNumberInput
   searchCriteria?: string;
 
   private _previousFormattedNumber?: string;
-  private _format: PhoneNumberFormat = 'default';
+  private _format: PhoneNumberFormat = 'E164';
 
   onTouched = () => {};
   propagateChange = (_: any) => {};
@@ -492,7 +492,7 @@ export class MatPhoneNumberInput
   }
 
   private formatAsYouTypeIfEnabled(): void {
-    if (this.format === 'default') {
+    if (this.format === 'E164') {
       return;
     }
     const asYouType: AsYouType = new AsYouType(

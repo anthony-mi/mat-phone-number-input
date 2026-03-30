@@ -1,1 +1,1 @@
-export type PhoneNumberFormat = 'default' | 'national' | 'international';
+export type PhoneNumberFormat = 'E164' | 'national' | 'international';
