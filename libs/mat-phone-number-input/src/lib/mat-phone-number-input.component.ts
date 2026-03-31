@@ -119,7 +119,7 @@ export class MatPhoneNumberInput
   @Input() searchPlaceholder = 'Search country or code';
   @Input() initialCountry?: string;
   @Input({ transform: booleanAttribute }) hideNativeName = false;
-  @Input({ transform: booleanAttribute }) enablePlaceholder = false;
+  @Input({ transform: booleanAttribute }) enablePlaceholder = true;
   @Input({ transform: booleanAttribute }) enableSearch = false;
   @Input({ transform: booleanAttribute }) resetOnChange = false;
   @Input()
