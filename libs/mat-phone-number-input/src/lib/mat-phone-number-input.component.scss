@@ -89,6 +89,8 @@ input {
   height: initial;
   line-height: unset;
   padding: 1px;
+  width: 90px;
+  max-width: 90px;
   opacity: var(
     --mat-phone-number-input-selector-opacity,
     var(--mat-phone-number-input-opacity, 1)
@@ -119,7 +121,7 @@ input {
 
 .country-selector-flag {
   display: var(--mat-phone-number-input-flag-display, inline-block);
-  margin-right: 0.5ex;
+  margin-right: 7px;
 }
 
 .country-list-button {
