@@ -173,7 +173,7 @@ export class MatPhoneNumberInput
   private _previousFormattedNumber?: string;
   private _format: PhoneNumberFormat = 'E164';
 
-  onTouched = () => {};
+  onTouched = () => { this.focused = false; };
   propagateChange = (_: any) => {};
 
   private errorState?: boolean;
@@ -183,11 +183,11 @@ export class MatPhoneNumberInput
     private countryCodeData: CountryCode,
     private _focusMonitor: FocusMonitor,
     private _elementRef: ElementRef<HTMLElement>,
+    _defaultErrorStateMatcher: ErrorStateMatcher,
     @Optional() @Self() _ngControl: NgControl,
     @Optional() _parentForm: NgForm,
     @Optional() _parentFormGroup: FormGroupDirective,
-    _defaultErrorStateMatcher: ErrorStateMatcher,
-    @Optional() @SkipSelf() @Inject(MatFormField) private _matFormField?: MatFormField
+    @Optional() @SkipSelf() @Inject(MatFormField) private _matFormField?: MatFormField,
   ) {
     super(_defaultErrorStateMatcher, _parentForm, _parentFormGroup, _ngControl);
 
@@ -195,9 +195,23 @@ export class MatPhoneNumberInput
       if (this.focused && !origin) {
         this.onTouched();
       }
+
       this.focused = !!origin;
       this.stateChanges.next();
+      this._changeDetectorRef.detectChanges();
     });
+  
+    if (this._matFormField && this._matFormField._elementRef) {
+      const formFieldEl = this._matFormField._elementRef.nativeElement as HTMLElement;
+      const observer = new MutationObserver(() => {
+        const isMatFocused = formFieldEl.classList.contains('mat-focused');
+         if (this.focused !== isMatFocused) {
+            this.focused = isMatFocused;
+            this.stateChanges.next();
+          }
+      });
+      observer.observe(formFieldEl, { attributes: true, attributeFilter: ['class'] });
+    }
 
     if (this.ngControl != null) {
       this.ngControl.valueAccessor = this;
@@ -209,7 +223,7 @@ export class MatPhoneNumberInput
   }
 
   get showPlaceholder(): boolean {
-    return !(this.isFloatLabelAuto && !this.focused);
+    return this.focused || !this.isFloatLabelAuto;
   }
 
   ngOnInit() {
@@ -364,6 +378,7 @@ export class MatPhoneNumberInput
     this.countryChanged.emit(this.selectedCountry);
 
     this.onPhoneNumberChange();
+
     el.focus();
   }
 
@@ -432,7 +447,10 @@ export class MatPhoneNumberInput
   }
 
   registerOnTouched(fn: any): void {
-    this.onTouched = fn;
+    this.onTouched = () => {
+      this.focused = false;
+      fn();
+    };
   }
 
   setDisabledState(isDisabled: boolean): void {
