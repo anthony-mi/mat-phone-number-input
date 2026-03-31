@@ -17,6 +17,8 @@ import {
   Self,
   ViewChild,
   booleanAttribute,
+  Inject,
+  SkipSelf,
 } from '@angular/core';
 import {
   FormControl,
@@ -29,7 +31,7 @@ import {
 } from '@angular/forms';
 import { ErrorStateMatcher, MatRippleModule } from '@angular/material/core';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatFormFieldControl } from '@angular/material/form-field';
+import { MatFormField, MatFormFieldControl } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenu, MatMenuModule } from '@angular/material/menu';
 import {
@@ -185,6 +187,7 @@ export class MatPhoneNumberInput
     @Optional() _parentForm: NgForm,
     @Optional() _parentFormGroup: FormGroupDirective,
     _defaultErrorStateMatcher: ErrorStateMatcher,
+    @Optional() @SkipSelf() @Inject(MatFormField) private _matFormField?: MatFormField
   ) {
     super(_defaultErrorStateMatcher, _parentForm, _parentFormGroup, _ngControl);
 
@@ -199,6 +202,14 @@ export class MatPhoneNumberInput
     if (this.ngControl != null) {
       this.ngControl.valueAccessor = this;
     }
+  }
+
+  get isFloatLabelAuto(): boolean {
+    return this._matFormField?.floatLabel === 'auto';
+  }
+
+  get showPlaceholder(): boolean {
+    return !(this.isFloatLabelAuto && !this.focused);
   }
 
   ngOnInit() {

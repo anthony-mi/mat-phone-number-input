@@ -102,7 +102,7 @@
     [(ngModel)]="phoneNumber"
     (ngModelChange)="onPhoneNumberChange()"
     [errorStateMatcher]="errorStateMatcher"
-    [placeholder]="placeholder || $any(selectedCountry.placeHolder)"
+    [placeholder]="showPlaceholder ? (placeholder || $any(selectedCountry.placeHolder)) : ''"
     [disabled]="disabled"
     #focusable
     [maxlength]="maxLength"
