@@ -35,7 +35,8 @@ export class AppComponent {
 
   title = 'mat-phone-number-input-tester';
   form1 = this.fb.group({
-    phone: ['+919813785563', [Validators.required]],
+    phone: ['+46701234567', [Validators.required]],
+    phone2: [''],
   });
 
   phone: string = '+5511912347894';

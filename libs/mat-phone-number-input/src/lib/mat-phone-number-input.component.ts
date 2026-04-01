@@ -248,8 +248,6 @@ export class MatPhoneNumberInput
       );
     }
 
-    this._setDefaultCountry();
-
     this._changeDetectorRef.markForCheck();
     this.stateChanges.next();
   }
@@ -273,26 +271,22 @@ export class MatPhoneNumberInput
   }
 
   private _setDefaultCountry() {
-    const initialCountry = this.initialCountry?.trim().toLowerCase();
+    if (!this.allCountries?.length) {
+      this.fetchCountryData();
+    }
+
+    const initialCountryString: string | undefined = this.initialCountry?.trim().toLowerCase();
+    const initialCountry: Country | undefined = this.allCountries.find((c) => c.iso2 === initialCountryString);
 
     if (this.numberInstance?.country) {
       // If an existing number is present, we use it to determine selectedCountry
       this.selectedCountry = this.getCountry(this.numberInstance.country);
+    } else if (initialCountry) {
+      this.selectedCountry = initialCountry;
     } else if (this.preferredCountriesInDropDown.length) {
       this.selectedCountry = this.preferredCountriesInDropDown[0];
     } else {
       this.selectedCountry = this.allCountries[0];
-    }
-
-    if (initialCountry) {
-      const initial = this.allCountries.find((c) => c.iso2 === initialCountry);
-
-      if (initial) {
-        this.selectedCountry = initial;
-        this.countryChanged.emit(this.selectedCountry);
-
-        return;
-      }
     }
 
     this.countryChanged.emit(this.selectedCountry);
@@ -488,6 +482,9 @@ export class MatPhoneNumberInput
     // else if (this.phoneNumber !== '') {
     //   this.reset()
     // }
+
+    console.log('2');
+    this._setDefaultCountry();
 
     // Value is set from outside using setValue()
     this.onPhoneNumberChange();

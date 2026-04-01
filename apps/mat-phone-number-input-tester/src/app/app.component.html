@@ -26,6 +26,22 @@
       ></mat-phone-number-input>
       <mat-error>Invalid phone</mat-error>
     </mat-form-field>
+    <mat-form-field class="w-full" [floatLabel]="'auto'">
+      <mat-label style="margin-left: 95px;">Phone</mat-label>
+      <mat-phone-number-input
+        format="E164"
+        initialCountry="no"
+        [preferredCountries]="['se', 'fi', 'no']"
+        [hideNativeName]="true"
+        enablePlaceholder
+        enableSearch
+        [formControl]="form1.controls.phone2"
+        describedBy="phoneInput"
+        required
+        maxLength="20"
+      ></mat-phone-number-input>
+      <mat-error>Invalid phone</mat-error>
+    </mat-form-field>
   </form>
 
   <div class="flex mb-4 gap-4">
