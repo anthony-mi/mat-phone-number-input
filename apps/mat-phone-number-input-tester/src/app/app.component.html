@@ -11,7 +11,7 @@
   <h2>Form sample</h2>
   <form [formGroup]="form1">
     <mat-form-field class="w-full" [floatLabel]="'always'">
-      <mat-label>Phone</mat-label>
+      <mat-label>Phone number</mat-label>
       <mat-phone-number-input
         format="E164"
         initialCountry="no"
@@ -24,10 +24,10 @@
         required
         maxLength="20"
       ></mat-phone-number-input>
-      <mat-error>Invalid phone</mat-error>
+      <mat-error>Invalid phone number</mat-error>
     </mat-form-field>
     <mat-form-field class="w-full" [floatLabel]="'auto'">
-      <mat-label style="margin-left: 95px;">Phone</mat-label>
+      <mat-label style="margin-left: 95px;">Phone number</mat-label>
       <mat-phone-number-input
         format="E164"
         initialCountry="no"
@@ -40,7 +40,7 @@
         required
         maxLength="20"
       ></mat-phone-number-input>
-      <mat-error>Invalid phone</mat-error>
+      <mat-error>Invalid phone number</mat-error>
     </mat-form-field>
   </form>
 
@@ -81,7 +81,7 @@
   <div class="flex gap-4">
     <div>
       <div>
-        <strong>phone:</strong>
+        <strong>Phone number:</strong>
         <pre>{{ phone }}</pre>
       </div>
     </div>

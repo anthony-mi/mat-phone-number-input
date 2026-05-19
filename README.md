@@ -13,8 +13,8 @@ This is a fork from [ngx-mat-input-tel](https://github.com/rbalet/ngx-mat-input-
 
 **Supports:**
 
-- Angular v19
-- Angular Material v19
+- Angular v20
+- Angular Material v20
 - ReactiveFormsModule
 - FormsModule
 - Validation with [libphonenumber-js](https://github.com/catamphetamine/libphonenumber-js)
@@ -102,8 +102,8 @@ If you want to show the sample number for the country selected or errors , use m
 
 ## Css variable
 
-| Name                                  | Default        | Explanation                                                                   |
-| ------------------------------------- | -------------- | ----------------------------------------------------------------------------- |
+| Name                                           | Default        | Explanation                                                                   |
+| ---------------------------------------------- | -------------- | ----------------------------------------------------------------------------- |
 | `--mat-phone-number-input-opacity`             | `1`            | If you wish both, the country flag and the placeholder to be shown by default |
 | `--mat-phone-number-input-selector-opacity`    | `1`            | If you wish the country flag to be shown by default                           |
 | `--mat-phone-number-input-placeholder-opacity` | `1`            | If you wish the placeholder flag to be shown by default                       |
@@ -113,8 +113,8 @@ If you want to show the sample number for the country selected or errors , use m
 
 In case you had to manually remove the validator, the library exported it so you could add it back again.
 
-| Name                   | Description                                     | Example                                              |
-| ---------------------- | ----------------------------------------------- | ---------------------------------------------------- |
+| Name                           | Description                                     | Example                                                      |
+| ------------------------------ | ----------------------------------------------- | ------------------------------------------------------------ |
 | `matPhoneNumberInputValidator` | The actual phone validator used for the control | `phoneControl.addValidators([matPhoneNumberInputValidator])` |
 
 ## Library Contributions
@@ -140,5 +140,5 @@ In your project run:
 
 ## Authors and acknowledgment
 
-- Maintainer [Munir I Said](https://github.com/Muneersahel)
-- Forked from [ngx-mat-input-tel](https://github.com/rbalet/ngx-mat-input-tel)
+- Maintainer [Anton Mynchenko](https://github.com/anthony-mi)
+- Forked from [mat-tel-input](https://github.com/Muneersahel/mat-tel-input)

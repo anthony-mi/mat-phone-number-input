@@ -482,8 +482,6 @@ export class MatPhoneNumberInput
     // else if (this.phoneNumber !== '') {
     //   this.reset()
     // }
-
-    console.log('2');
     this._setDefaultCountry();
 
     // Value is set from outside using setValue()
