@@ -1,6 +1,6 @@
 {
   "name": "mat-phone-number-input",
-  "version": "20.0.1",
+  "version": "21.0.0",
   "sideEffects": false,
   "author": {
     "name": "Anton Mynchenko",
@@ -34,12 +34,12 @@
     "tslib": "^2.x"
   },
   "peerDependencies": {
-    "@angular/common": "20.x",
-    "@angular/core": "20.x",
-    "@angular/material": "20.x",
-    "@angular/forms": "20.x",
-    "@angular/platform-browser": "20.x",
-    "@angular/platform-browser-dynamic": "20.x",
+    "@angular/common": "21.x",
+    "@angular/core": "21.x",
+    "@angular/material": "21.x",
+    "@angular/forms": "21.x",
+    "@angular/platform-browser": "21.x",
+    "@angular/platform-browser-dynamic": "21.x",
     "libphonenumber-js": "^1.11.16"
   }
 }

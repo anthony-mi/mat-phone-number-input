@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(yarn nx *)",
+      "Bash(npx nx *)",
+      "Bash(node node_modules/.bin/nx migrate latest)",
+      "PowerShell(Get-Process *)"
+    ]
+  }
+}

@@ -13,8 +13,8 @@ This is a fork from [ngx-mat-input-tel](https://github.com/rbalet/ngx-mat-input-
 
 **Supports:**
 
-- Angular v20
-- Angular Material v20
+- Angular v21
+- Angular Material v21
 - ReactiveFormsModule
 - FormsModule
 - Validation with [libphonenumber-js](https://github.com/catamphetamine/libphonenumber-js)
