@@ -100,7 +100,6 @@ export class MatPhoneNumberInput
   menuSearchInput?: ElementRef<HTMLInputElement>;
   @ViewChild('focusable', { static: false }) focusable!: ElementRef;
 
-  @HostBinding()
   id = `mat-phone-number-input-${MatPhoneNumberInput.nextId++}`;
   @HostBinding('class.floating')
   get shouldLabelFloat(): boolean {
