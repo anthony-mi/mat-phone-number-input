@@ -21,6 +21,7 @@ import {
   SkipSelf,
 } from '@angular/core';
 import {
+  AbstractControl,
   FormControl,
   FormGroupDirective,
   FormsModule,
@@ -41,6 +42,7 @@ import {
   NationalNumber,
   PhoneNumber,
   getExampleNumber,
+  parsePhoneNumber,
   parsePhoneNumberFromString,
 } from 'libphonenumber-js';
 import { Subject } from 'rxjs';
@@ -455,7 +457,7 @@ export class MatPhoneNumberInput
 
   writeValue(value: any): void {
     if (value) {
-      this.numberInstance = parsePhoneNumberFromString(value);
+      this.numberInstance = this.getPhoneNumberInstance(value);
       if (this.numberInstance) {
         const countryCode = this.numberInstance.country;
         this.phoneNumber = this.formattedPhoneNumber();
@@ -506,6 +508,21 @@ export class MatPhoneNumberInput
 
     this._changeDetectorRef.markForCheck();
     this.stateChanges.next(undefined);
+  }
+
+  private getPhoneNumberInstance(value: string): PhoneNumber | undefined {
+    try {
+      parsePhoneNumber(value);
+    } catch(e: any) {
+      if (e['message'] === 'INVALID_COUNTRY') {
+        this._setDefaultCountry();
+        this.numberInstance = parsePhoneNumberFromString(this.ngControl.control!.value, this.selectedCountry.iso2.toUpperCase() as CC);
+        value = this.numberInstance?.number || value;
+        this.ngControl.control?.setValue(value, { emitEvent: false });
+      }
+    }
+
+    return parsePhoneNumberFromString(value);
   }
 
   private formattedPhoneNumber(): E164Number | NationalNumber {
