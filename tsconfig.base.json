@@ -13,9 +13,8 @@
     "lib": ["es2020", "dom"],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
-    "baseUrl": ".",
     "paths": {
-      "mat-phone-number-input": ["libs/mat-phone-number-input/src/index.ts"]
+      "mat-phone-number-input": ["./libs/mat-phone-number-input/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
