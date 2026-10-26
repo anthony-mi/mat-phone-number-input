@@ -1,13 +1,13 @@
 {
   "name": "mat-phone-number-input",
-  "version": "21.0.2",
+  "version": "22.2.3",
   "sideEffects": false,
   "author": {
-    "name": "Anton Mynchenko",
-    "email": "code.inside.us@gmail.com"
+    "name": "Andrei Iarovoi",
+    "email": "iarovoi.andrei@gmail.com"
   },
   "maintainers": [
-    "Anton Mynchenko <code.inside.us@gmail.com>"
+    "Andrei Iarovoi <iarovoi.andrei@gmail.com>"
   ],
   "repository": {
     "type": "git",
@@ -34,12 +34,12 @@
     "tslib": "^2.x"
   },
   "peerDependencies": {
-    "@angular/common": "21.x",
-    "@angular/core": "21.x",
-    "@angular/material": "21.x",
-    "@angular/forms": "21.x",
-    "@angular/platform-browser": "21.x",
-    "@angular/platform-browser-dynamic": "21.x",
-    "libphonenumber-js": "^1.11.16"
+    "@angular/common": "22.x",
+    "@angular/core": "22.x",
+    "@angular/material": "22.x",
+    "@angular/forms": "22.x",
+    "@angular/platform-browser": "22.x",
+    "@angular/platform-browser-dynamic": "22.x",
+    "libphonenumber-js": "^1.13.15"
   }
 }
